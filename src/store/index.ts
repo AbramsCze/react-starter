@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware, Store } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import createSagaMiddleware from 'redux-saga'
-import rootReducer, { RootState } from '../reducers'
+import rootReducer from '../reducers'
 
-export function configureStore(initialState?: RootState) {
+export function configureStore(initialState?: State): Store<State> {
   const sagaMiddleware = createSagaMiddleware()
   let middleware = applyMiddleware(sagaMiddleware)
 
@@ -11,7 +11,7 @@ export function configureStore(initialState?: RootState) {
     middleware = composeWithDevTools(middleware)
   }
 
-  const store = createStore(rootReducer, initialState, middleware) as Store<RootState>
+  const store = createStore(rootReducer, initialState, middleware) as Store<State>
 
   // if (module.hot) {
   //   module.hot.accept('../reducers', () => {

@@ -1,7 +1,9 @@
-/** Global definitions for developement **/
+/** Global action type */
+declare type Action = {
+  [key: string]: string;
+}
 
-// for style loader
-declare module '*.css' {
-  const styles: any;
-  export = styles;
+/** Redux state */
+declare type State = {
+  cv: CvState;
 }

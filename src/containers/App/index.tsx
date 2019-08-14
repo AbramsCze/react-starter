@@ -1,23 +1,13 @@
-import * as React from 'react'
+import React, { Component, Fragment } from 'react'
 import { RouteComponentProps } from 'react-router'
-import * as style from './style.css'
-import * as TodoActions from '../../actions/todos'
-import { Header, MainSection } from '../../components'
+import { LoadingButton } from '../../components'
 
-export interface Props extends RouteComponentProps<void> {
-  todos: TodoItemData[]
-  actions: typeof TodoActions
-}
-
-export class App extends React.Component<Props> {
-  render() {
-    const { children } = this.props
+export class App extends Component<RouteComponentProps<void>> {
+  render(): any {
     return (
-      <div className={style.normal}>
-        <Header />
-        <MainSection />
-        {children}
-      </div>
+      <Fragment>
+        <LoadingButton />
+      </Fragment>
     )
   }
 }
