@@ -2,7 +2,7 @@
 import { CvInitialState } from './cv'
 
 describe('cv model', () => {
-  let mockedState
+  let mockedState: CvState
 
   beforeAll(() => {
     mockedState = {

@@ -10,7 +10,7 @@ type DispatchToProps = {
   setCvLoading: (loading: boolean) => void;
 }
 
-type Props = StateToProps & DispatchToProps
+export type Props = StateToProps & DispatchToProps
 
 export class LoadingButton extends Component<Props> {
   constructor(props: Props) {

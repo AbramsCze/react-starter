@@ -4,10 +4,10 @@ import { shallow } from 'enzyme'
 import { fake } from 'sinon'
 
 // others
-import { LoadingButton } from './LoadingButton'
+import { LoadingButton, Props } from './LoadingButton'
 
 describe('LoadingButton component', () => {
-  let props
+  let props: Props
 
   beforeEach(() => {
     props = {
