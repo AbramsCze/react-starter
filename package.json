@@ -91,9 +91,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint:fix --max-warnings=0 && yarn test:coverage",
-      "post-commit": "git update-index --again",
-      "pre-push": "yarn test --ci"
+      "pre-commit": "yarn lint:fix --max-warnings=0"
     }
   }
 }
