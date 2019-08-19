@@ -55,8 +55,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:coverage": "yarn test --coverage",
+    "test": "react-scripts test --env=jsdom ",
+    "test:coverage": "yarn test --coverage --watchAll",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0",
     "lint:fix": "yarn lint --fix"
   },
@@ -91,7 +91,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint:fix --max-warnings=0"
+      "pre-commit": "yarn lint:fix --max-warnings=0",
+      "pre-push": "CI=true react-scripts test --coverage"
     }
   }
 }
