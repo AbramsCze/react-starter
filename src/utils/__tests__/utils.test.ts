@@ -1,5 +1,5 @@
 // others
-import { copyActionKeysToValues } from './utils'
+import { copyActionKeysToValues } from '../utils'
 
 describe('utils test', () => {
   const mockedActions = {

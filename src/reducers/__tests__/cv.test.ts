@@ -1,7 +1,7 @@
 //others
-import cv from './cv'
-import { CvInitialState } from '../models/cv'
-import { setCvLoading, setCvData } from '../actions/cv'
+import cv from '../cv'
+import { CvInitialState } from '../../models/cv'
+import { setCvLoading, setCvData } from '../../actions/cv'
 
 describe('cv reducer', () => {
   let cvLoading: boolean

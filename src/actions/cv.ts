@@ -7,14 +7,8 @@ import { copyActionKeysToValues } from '../utils/utils'
 
 copyActionKeysToValues(CvActionsTypes)
 
-export const setCvLoading = createAction(
-  CvActionsTypes.SET_CV_LOADING,
-  (loading: boolean) => loading,
-)
+export const setCvLoading = createAction<boolean>(CvActionsTypes.SET_CV_LOADING)
+export type SetCvLoadingAction = Action<boolean>
 
-export type SetCvLoadingAction = Action<typeof setCvLoading>
-
-export const setCvData = createAction(
-  CvActionsTypes.SET_CV_DATA,
-  (data: Array<string>) => data,
-)
+export const setCvData = createAction<Array<string>>(CvActionsTypes.SET_CV_DATA)
+export type SetCvDataAction = Action<Array<string>>

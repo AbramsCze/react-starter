@@ -22,7 +22,7 @@ export class LoadingButton extends Component<Props> {
     setCvLoading(!cvAreLoading)
   }
 
-  render(): any {
+  render() {
     const { cvAreLoading } = this.props
     const { handleClick } = this
     return (
@@ -34,7 +34,7 @@ export class LoadingButton extends Component<Props> {
   }
 }
 
-const mapStateToProps: any = (state: State) => ({
+const mapStateToProps = (state: State) => ({
   cvAreLoading: state.cv.loading
 })
 

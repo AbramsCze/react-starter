@@ -1,5 +1,5 @@
 // others
-import { CvInitialState } from './cv'
+import { CvInitialState } from '../cv'
 
 describe('cv model', () => {
   let mockedState: CvState

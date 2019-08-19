@@ -3,7 +3,7 @@ import { RouteComponentProps } from 'react-router'
 import { LoadingButton } from '../../components'
 
 export class App extends Component<RouteComponentProps<void>> {
-  render(): any {
+  render() {
     return (
       <Fragment>
         <LoadingButton />

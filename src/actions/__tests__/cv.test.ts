@@ -1,6 +1,6 @@
 // others
-import { CvActionsTypes } from '../constants/actions'
-import { setCvData, setCvLoading } from './cv'
+import { CvActionsTypes } from '../../constants/actions'
+import { setCvData, setCvLoading } from '../cv'
 
 describe('cv actions', () => {
   it('should create action to set cv is loading', () => {
