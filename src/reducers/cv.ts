@@ -19,7 +19,7 @@ export default handleActions<CvState, any>(
       return {
         ...state,
         loading: false,
-        cvs: action.payload
+        users: action.payload
       }
     }
   },

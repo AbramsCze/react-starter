@@ -5,11 +5,11 @@ import { setCvLoading, setCvData } from '../../actions/cv'
 
 describe('cv reducer', () => {
   let cvLoading: boolean
-  let cvData: Array<string>
+  let userData: Array<User>
 
   beforeAll(() => {
     cvLoading = true
-    cvData = ['test1', 'test2']
+    userData = [{ 'id': 2, 'name': 'Tomáš', 'surname': 'Dvořák', 'job': 'Web devoloper' }]
   })
 
   it('should handle setCvLoading', () => {
@@ -23,8 +23,8 @@ describe('cv reducer', () => {
   it('should handle setCvData', () => {
     const state = cv(
       CvInitialState,
-      setCvData(cvData)
+      setCvData(userData)
     )
-    expect(state.cvs).toEqual(cvData)
+    expect(state.users).toEqual(userData)
   })
 })

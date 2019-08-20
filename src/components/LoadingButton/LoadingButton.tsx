@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { setCvLoading } from '../../actions/cv'
+import { setCvLoading, getUserDetail } from '../../actions/cv'
 
 type StateToProps = {
   cvAreLoading?: boolean;
@@ -8,27 +8,30 @@ type StateToProps = {
 
 type DispatchToProps = {
   setCvLoading: (loading: boolean) => void;
+  getUserDetail: (userId: number) => void;
 }
 
 export type Props = StateToProps & DispatchToProps
 
 export class LoadingButton extends Component<Props> {
-  constructor(props: Props) {
-    super(props)
-  }
-
-  handleClick = (): void => {
+  handleLoading = (): void => {
     const { setCvLoading, cvAreLoading } = this.props
     setCvLoading(!cvAreLoading)
   }
 
+  handleDetail = (): void => {
+    const { getUserDetail } = this.props
+    getUserDetail(2)
+  }
+
   render() {
     const { cvAreLoading } = this.props
-    const { handleClick } = this
+    const { handleLoading, handleDetail } = this
     return (
       <Fragment>
-        <button onClick={handleClick}>Toggle loading</button>
+        <button onClick={handleLoading}>Toggle loading</button>
         <span>{cvAreLoading ? 'LOADING' : 'DONE'}</span>
+        <button onClick={handleDetail}>Fetch user</button>
       </Fragment>
     )
   }
@@ -40,6 +43,7 @@ const mapStateToProps = (state: State) => ({
 
 const mapDispatchToProps = {
   setCvLoading,
+  getUserDetail,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoadingButton)

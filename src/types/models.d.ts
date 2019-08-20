@@ -1,4 +1,4 @@
 declare type CvState = {
-  cvs: Array<string>;
+  users: Array<User>;
   loading: boolean;
 }

@@ -7,7 +7,7 @@ describe('cv model', () => {
   beforeAll(() => {
     mockedState = {
       loading: false,
-      cvs: [],
+      users: [],
     }
   })
 

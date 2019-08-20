@@ -1,0 +1,6 @@
+{
+  "apiUrl": "http://localhost:8888",
+  "environment": "development",
+  "timeout": 120000,
+  "tokenExpirationTolerance": 60000
+}

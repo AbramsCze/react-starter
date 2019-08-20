@@ -7,3 +7,12 @@ declare type Action = {
 declare type State = {
   cv: CvState;
 }
+
+declare type Token = string | null
+
+declare type JsonConfig = {
+  apiUrl: string;
+  environment: string;
+  timeout: number;
+  tokenExpirationTolerance: number;
+}
