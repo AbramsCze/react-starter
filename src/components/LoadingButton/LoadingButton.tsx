@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { setCvLoading, getUserDetail } from '../../actions/cv'
+import { StoreState } from '../../types/global'
 
 type StateToProps = {
   cvAreLoading?: boolean;
@@ -27,6 +28,7 @@ export class LoadingButton extends Component<Props> {
   render() {
     const { cvAreLoading } = this.props
     const { handleLoading, handleDetail } = this
+    
     return (
       <Fragment>
         <button onClick={handleLoading}>Toggle loading</button>
@@ -37,7 +39,7 @@ export class LoadingButton extends Component<Props> {
   }
 }
 
-const mapStateToProps = (state: State) => ({
+const mapStateToProps = (state: StoreState) => ({
   cvAreLoading: state.cv.loading
 })
 

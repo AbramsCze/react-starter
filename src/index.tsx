@@ -1,10 +1,13 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+// libs
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { Router, Route, Switch } from 'react-router'
+import { Router } from 'react-router'
 import { createBrowserHistory } from 'history'
+
+// others
 import { configureStore } from './store'
-import { App } from './containers/App'
+import App from './containers/App/App'
 
 const store = configureStore()
 const history = createBrowserHistory()
@@ -12,9 +15,7 @@ const history = createBrowserHistory()
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <Switch>
-        <Route path="/" component={App} />
-      </Switch>
+      <App />
     </Router>
   </Provider>,
   document.getElementById('root'),

@@ -1,4 +1,5 @@
-declare type CvState = {
-  users: Array<User>;
-  loading: boolean;
+declare type User = {
+  name: string;
+  surname: string;
+  job: string;
 }

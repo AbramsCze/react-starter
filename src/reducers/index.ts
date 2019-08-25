@@ -1,9 +1,12 @@
 // libs
 import { combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
 
 //others
-import cv from './cv'
+import { default as cvReducer } from './cv'
+import { StoreState } from '../types/global'
 
-export default combineReducers<State>({
-  cv,
+export default combineReducers<StoreState>({
+  form: formReducer,
+  cv: cvReducer
 })

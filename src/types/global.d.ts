@@ -1,10 +1,14 @@
+// libs
+import { FormStateMap } from 'redux-form'
+
 /** Global action type */
 declare type Action = {
   [key: string]: string;
 }
 
 /** Redux state */
-declare type State = {
+declare type StoreState = {
+  form: FormStateMap;
   cv: CvState;
 }
 

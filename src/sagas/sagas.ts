@@ -9,6 +9,7 @@ import { downloadConfig } from './rest/localApi'
 //import { toastsMessages } from '../i18n'
 import { CvActionsTypes } from '../constants/actions'
 import { fetchUserDetailSaga } from './cv'
+import { JsonConfig } from '../types/global'
 
 function* initializeApplication(config: JsonConfig) {
   yield all([

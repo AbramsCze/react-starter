@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { JsonConfig, Token } from '../../types/global'
 
 const defaultHeaders = {
   Accept: 'application/json;charset=UTF-8',

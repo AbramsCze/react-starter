@@ -1,3 +1,5 @@
+import { Action } from '../types/global'
+
 /**
  * Will copy keys names as their values for actions object.
  * @param {Action} actions (constant) object.
