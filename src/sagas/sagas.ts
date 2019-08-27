@@ -8,12 +8,13 @@ import { Api } from './rest/index'
 import { downloadConfig } from './rest/localApi'
 //import { toastsMessages } from '../i18n'
 import { CvActionsTypes } from '../constants/actions'
-import { fetchUserDetailSaga } from './cv'
+import { fetchUserDetailSaga, updateUserDetailSaga } from './cv'
 import { JsonConfig } from '../types/global'
 
 function* initializeApplication(config: JsonConfig) {
   yield all([
     takeLatest(CvActionsTypes.GET_USER_DETAIL, fetchUserDetailSaga),
+    takeLatest(CvActionsTypes.SET_USER_DETAIL, updateUserDetailSaga),
   ])
 
   // intialize API with json config

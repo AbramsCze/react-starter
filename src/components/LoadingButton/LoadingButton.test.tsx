@@ -12,6 +12,7 @@ describe('LoadingButton component', () => {
   beforeEach(() => {
     props = {
       setCvLoading: fake(),
+      getUserDetail: fake(),
       cvAreLoading: false,
     }
   })

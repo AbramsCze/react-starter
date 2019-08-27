@@ -9,6 +9,7 @@ declare type Action = {
 /** Redux state */
 declare type StoreState = {
   form: FormStateMap;
+  toasts: ToastsState;
   cv: CvState;
 }
 

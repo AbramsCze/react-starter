@@ -15,3 +15,6 @@ export type SetCvDataAction = Action<Array<User>>
 
 export const getUserDetail = createAction<number>(CvActionsTypes.GET_USER_DETAIL)
 export type GetUserDetailAction = Action<number>
+
+export const setUserDetail = createAction<User>(CvActionsTypes.SET_USER_DETAIL)
+export type SetUserDetailAction = Action<User>
