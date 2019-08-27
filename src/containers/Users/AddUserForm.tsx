@@ -6,13 +6,13 @@ import { Field, reduxForm, InjectedFormProps } from 'redux-form'
 // others
 import Forms from '../../constants/forms'
 
-export type OuterProps = {
+type OuterProps = {
   onSubmit: (values: User) => void;
 }
 
 type Props = OuterProps & RouteComponentProps<void>
 
-export const AddUserForm: FunctionComponent<Props & InjectedFormProps<User, Props>> = (props: Props & InjectedFormProps<User, Props>) => {
+const AddUserForm: FunctionComponent<Props & InjectedFormProps<User, Props>> = (props: Props & InjectedFormProps<User, Props>) => {
   const { handleSubmit } = props
 
   return (

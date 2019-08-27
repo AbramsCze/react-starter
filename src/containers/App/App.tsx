@@ -10,7 +10,6 @@ import AddUserPage from '../Users/AddUserPage'
 import { Homepage } from '../Homepage/Homepage'
 
 export const App: FunctionComponent = () => (
-  // <ToastContainer toastComponent={Toast} position="top-right" />
   <Fragment>
     <ToastContainer toastComponent={Toast} position="top-right" />
       <Switch>
