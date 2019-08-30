@@ -4,7 +4,6 @@ import { success, error } from 'react-toastify-redux'
 
 // others
 import Endpoints from '../constants/endpoints'
-//import { toastsMessages } from '../../i18n'
 import { getSaga } from './rest'
 import { setCvLoading, setCvData, GetUserDetailAction, SetUserDetailAction } from '../actions/cv'
 
@@ -26,7 +25,8 @@ export function* updateUserDetailSaga(action: SetUserDetailAction) {
   const user: User = action.payload
 
   try {
-    yield put(success(user.name + ' ' + user.surname + ' ' + user.job))
+    yield put(success('app.user.update'))
+    yield put(error('', { title: 'ERROR: ' + user.name + ' ' + user.surname }))
   } catch (err) {
     yield put(error('ERROR'))
   }

@@ -3,19 +3,16 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 // others
-import Toast, { Props } from './Toast'
+import Toast from './Toast'
 
 describe('Toast component', () => {
-  let props: Props
-
-  beforeEach(() => {
-    props = {
-      message: 'toast message',
-    }
+  it('should render Toast with string message', () => {
+    const renderedToast = shallow(<Toast message='' title='toast message' />)
+    expect(renderedToast).toMatchSnapshot()
   })
 
-  it('should render Toast with string messages', () => {
-    const renderedToast = shallow(<Toast {...props} />)
+  it('should render Toast with i18n message', () => {
+    const renderedToast = shallow(<Toast message='app.user.menu.logout' />)
     expect(renderedToast).toMatchSnapshot()
   })
 })

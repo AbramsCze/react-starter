@@ -47,7 +47,7 @@ describe('updateUserDetailSaga', () => {
   })
 
   it('success passing through', () => {
-    const action = success('Saga Test Tester')
+    const action = success('app.user.update')
     action.payload.id = 'toast2'
     const expectedEffect = put(action)
     expect(sagaIt.next().value).toEqual(expectedEffect)

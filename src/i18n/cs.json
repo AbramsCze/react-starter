@@ -1,0 +1,8 @@
+{
+  "app.user.menu.logout": "Odhlásit",
+  "app.user.menu.change.password": "Změnit heslo",
+  "app.toast.message.resetOperatorsPasswordSucces": "Heslo operatára bylo úspěšne resetováno",
+  "app.validations.required": "Povinný",
+  "app.validations.user.id.error": "Hodnota uživatele { name } (id { id }) není platná",
+  "app.user.update": "Uživatel byl upraven"
+}

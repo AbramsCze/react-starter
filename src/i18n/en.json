@@ -1,0 +1,8 @@
+{
+  "app.user.menu.logout": "Logout",
+  "app.user.menu.change.password": "Change password",
+  "app.toast.message.resetOperatorsPasswordSucces": "Operator's password was successfully reseted",
+  "app.validations.required": "Required",
+  "app.validations.user.id.error": "User value { name } (id { id }) is incorrect",
+  "app.user.update": "User has been updated"
+}

@@ -1,22 +1,31 @@
 // libs
-import React, { Fragment, FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import { Route, Switch } from 'react-router'
 import { ToastContainer } from 'react-toastify-redux'
+import { IntlProvider } from 'react-intl'
 
 // others
 import Toast from '../../components/Toast/Toast'
 import routes from '../../constants/routes'
 import AddUserPage from '../Users/AddUserPage'
 import { Homepage } from '../Homepage/Homepage'
+import messagesCs from '../../i18n/cs.json'
+import messagesEn from '../../i18n/en.json'
+
+const messages: Record<string, Record<string, string>> = {
+  'cs': messagesCs,
+  'en': messagesEn
+}
+const language = navigator.language.split(/[-_]/)[0]  // language without region code
 
 export const App: FunctionComponent = () => (
-  <Fragment>
+  <IntlProvider locale={language} messages={messages[language]}>
     <ToastContainer toastComponent={Toast} position="top-right" />
       <Switch>
         <Route path={routes.USER_FORM} component={AddUserPage} />
         <Route path={routes.EMPTY} component={Homepage} />
       </Switch>
-    </Fragment>
+  </IntlProvider>
 )
 
 export default App
