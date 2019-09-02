@@ -1,5 +1,6 @@
 // libs
 import React, { FunctionComponent } from 'react'
+import { useSnackbar } from 'notistack'
 
 // others
 import AddUserForm from './AddUserForm'
@@ -14,8 +15,14 @@ export type Props = DispatchToProps
 
 export const AddUserPage: FunctionComponent<Props> = (props: Props) => {
   const { setUserDetail } = props
+  const { enqueueSnackbar } = useSnackbar()
 
   const handleSave = (values: User) => {
+    enqueueSnackbar(<div>I love hooks</div>, {
+      variant: 'success',
+      autoHideDuration: 1000,
+    })
+
     setUserDetail(values)
   }
 

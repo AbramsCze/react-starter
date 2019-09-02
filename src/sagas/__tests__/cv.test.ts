@@ -1,12 +1,11 @@
 // libs
 import { put, call } from 'redux-saga/effects'
 import { SagaIterator } from 'redux-saga'
-import { success } from 'react-toastify-redux'
 
 // others
-import { fetchUserDetailSaga, updateUserDetailSaga } from '../cv'
+import { fetchUserDetailSaga } from '../cv'
 import { CvActionsTypes } from '../../constants/actions'
-import { GetUserDetailAction, SetUserDetailAction, setCvLoading } from '../../actions/cv'
+import { GetUserDetailAction, setCvLoading } from '../../actions/cv'
 import { getSaga } from '../rest'
 import { Endpoints } from '../../constants/endpoints'
 
@@ -28,28 +27,5 @@ describe('fetchUserDetailSaga', () => {
     expect(sagaIt.next().value).toEqual(expectedEffect2)
     const expectedEffect3 = put(setCvLoading(false))
     expect(sagaIt.next().value).toEqual(expectedEffect3)
-  })
-})
-
-describe('updateUserDetailSaga', () => {
-  let sagaIt: SagaIterator
-  const action: SetUserDetailAction = {
-    payload: {
-      id: 0,
-      name: 'Saga',
-      surname: 'Test',
-      job: 'Tester'
-    },
-    type: CvActionsTypes.SET_USER_DETAIL
-  }
-  beforeAll(() => {
-    sagaIt = updateUserDetailSaga(action)
-  })
-
-  it('success passing through', () => {
-    const action = success('app.user.update')
-    action.payload.id = 'toast2'
-    const expectedEffect = put(action)
-    expect(sagaIt.next().value).toEqual(expectedEffect)
   })
 })

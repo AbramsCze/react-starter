@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Toast component should render Toast with i18n message 1`] = `ShallowWrapper {}`;
-
-exports[`Toast component should render Toast with string message 1`] = `ShallowWrapper {}`;

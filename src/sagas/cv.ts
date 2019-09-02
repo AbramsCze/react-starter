@@ -1,6 +1,5 @@
 // libs
 import { call, put } from 'redux-saga/effects'
-import { success, error } from 'react-toastify-redux'
 
 // others
 import Endpoints from '../constants/endpoints'
@@ -25,9 +24,9 @@ export function* updateUserDetailSaga(action: SetUserDetailAction) {
   const user: User = action.payload
 
   try {
-    yield put(success('app.user.update'))
-    yield put(error('', { title: 'ERROR: ' + user.name + ' ' + user.surname }))
+    yield put(setCvLoading(true))
+    console.log(user)
   } catch (err) {
-    yield put(error('ERROR'))
+    yield put(setCvLoading(false))
   }
 }

@@ -1,12 +1,10 @@
 // libs
 import { call, takeLatest, all } from 'redux-saga/effects'
-//import { error } from 'react-toastify-redux'
 
 // others
 import { Api } from './rest/index'
 
 import { downloadConfig } from './rest/localApi'
-//import { toastsMessages } from '../i18n'
 import { CvActionsTypes } from '../constants/actions'
 import { fetchUserDetailSaga, updateUserDetailSaga } from './cv'
 import { JsonConfig } from '../types/global'
@@ -43,6 +41,5 @@ export function* rootSaga() {
     yield call(initializeApplication, localConfig)
   } else {
     // config not found -> show error notification and exit
-    //yield put(error(toastsMessages.noEnvConfig))
   }
 }

@@ -5,9 +5,6 @@ import { Provider } from 'react-redux'
 import { Router } from 'react-router'
 import { createBrowserHistory } from 'history'
 
-// css
-import '../node_modules/react-toastify/dist/ReactToastify.min.css'
-
 // others
 import { configureStore } from './store'
 import App from './containers/App/App'
