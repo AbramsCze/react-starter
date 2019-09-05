@@ -3,7 +3,6 @@ import React, { FunctionComponent } from 'react'
 import { Route, Switch } from 'react-router'
 import { IntlProvider } from 'react-intl'
 import { SnackbarProvider } from 'notistack'
-import { makeStyles } from '@material-ui/styles'
 
 // others
 import routes from '../../constants/routes'
@@ -19,16 +18,7 @@ const messages: Record<string, Record<string, string>> = {
 const language = navigator.language.split(/[-_]/)[0]  // language without region code
 
 export const App: FunctionComponent = () => {
-  const rootStyles = makeStyles({
-    root: {
-      background: 'linear-gradient(45deg, #00ddff 30%, #FFFFFF 90%)',
-      color: 'midnightblue',
-    },
-  })
-  const classes = rootStyles()
-
   return (
-    <div className={classes.root}>
       <IntlProvider locale={language} messages={messages[language]}>
         <SnackbarProvider>
           <Switch>
@@ -37,7 +27,6 @@ export const App: FunctionComponent = () => {
           </Switch>
         </SnackbarProvider>
       </IntlProvider>
-    </div>
   )
 }
 
