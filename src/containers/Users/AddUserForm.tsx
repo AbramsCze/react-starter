@@ -1,5 +1,5 @@
 // libs
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { RouteComponentProps, withRouter } from 'react-router'
 import { Field, reduxForm, InjectedFormProps } from 'redux-form'
 
@@ -12,7 +12,7 @@ type OuterProps = {
 
 type Props = OuterProps & RouteComponentProps<void>
 
-const AddUserForm: FunctionComponent<Props & InjectedFormProps<User, Props>> = (props: Props & InjectedFormProps<User, Props>) => {
+const AddUserForm: React.FunctionComponent<Props & InjectedFormProps<User, Props>> = (props: Props & InjectedFormProps<User, Props>) => {
   const { handleSubmit } = props
 
   return (

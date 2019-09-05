@@ -1,5 +1,5 @@
 // libs
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { useSnackbar } from 'notistack'
 
 // others
@@ -13,7 +13,7 @@ type DispatchToProps = {
 
 export type Props = DispatchToProps
 
-export const AddUserPage: FunctionComponent<Props> = (props: Props) => {
+export const AddUserPage: React.FunctionComponent<Props> = (props: Props) => {
   const { setUserDetail } = props
   const { enqueueSnackbar } = useSnackbar()
 

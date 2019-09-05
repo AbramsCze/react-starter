@@ -1,5 +1,5 @@
 // libs
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { Route, Switch } from 'react-router'
 import { IntlProvider } from 'react-intl'
 import { SnackbarProvider } from 'notistack'
@@ -17,7 +17,7 @@ const messages: Record<string, Record<string, string>> = {
 }
 const language = navigator.language.split(/[-_]/)[0]  // language without region code
 
-export const App: FunctionComponent = () => {
+export const App: React.FunctionComponent = () => {
   return (
       <IntlProvider locale={language} messages={messages[language]}>
         <SnackbarProvider>

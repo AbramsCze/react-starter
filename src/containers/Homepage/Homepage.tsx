@@ -1,5 +1,5 @@
 // libs
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 
@@ -8,7 +8,7 @@ import { LoadingButton } from '../../components'
 import routes from '../../constants/routes'
 import { FormattedMessage } from 'react-intl'
 
-export const Homepage: FunctionComponent = () => {
+export const Homepage: React.FunctionComponent = () => {
     return (
       <div className="container">
         <div className="row">
