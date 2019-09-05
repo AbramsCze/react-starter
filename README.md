@@ -4,12 +4,14 @@ This project was bootstrapped via
 
 ## Libraries
 
-React
+React,
 Redux,
 Redux actions,
 Redux forms,
 Redux saga,
-Axios
+Axios,
+Material UI,
+Bootstrap
 
 ## Scripts
 
