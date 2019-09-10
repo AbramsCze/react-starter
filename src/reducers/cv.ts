@@ -5,7 +5,6 @@ import { handleActions } from 'redux-actions'
 import { CvInitialState } from '../models/cv'
 import { setCvLoading, setCvData, SetCvLoadingAction, SetCvDataAction } from '../actions/cv'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default handleActions<CvState, any>(
   {
     [setCvLoading.toString()]: (state: CvState, action: SetCvLoadingAction) => {

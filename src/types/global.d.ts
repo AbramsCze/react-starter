@@ -10,6 +10,7 @@ declare type Action = {
 declare type StoreState = {
   form: FormStateMap;
   cv: CvState;
+  notifications: Array<Snackbar>;
 }
 
 declare type Token = string | null

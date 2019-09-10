@@ -7,7 +7,7 @@ import { SnackbarProvider } from 'notistack'
 // others
 import routes from '../../constants/routes'
 import AddUserPage from '../Users/AddUserPage'
-import { Homepage } from '../Homepage/Homepage'
+import Homepage from '../Homepage/Homepage'
 import messagesCs from '../../i18n/cs.json'
 import messagesEn from '../../i18n/en.json'
 
@@ -24,7 +24,7 @@ export const App: React.FunctionComponent = () => {
           <Switch>
             <Route path={routes.USER_FORM} component={AddUserPage} />
             <Route path={routes.EMPTY} component={Homepage} />
-          </Switch>
+        </Switch>
         </SnackbarProvider>
       </IntlProvider>
   )
